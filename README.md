@@ -23,4 +23,4 @@
 
 ## Git
 
-Коммиты отражают фактически подготовленные этапы. Прошлые даты и чужое авторство не имитируются. Перед push создайте пустой GitHub-репозиторий и подключите его как origin. Секреты не коммитятся. Стек следующей версии: Next.js, TypeScript, Supabase Auth, PostgreSQL и Storage.
+Коммиты отражают фактически подготовленные этапы. Прошлые даты и чужое авторство не имитируются. Репозиторий: https://github.com/lool132k/Online-Courses. Ветка main содержит опубликованные этапы проекта. Для работы команды: `git clone https://github.com/lool132k/Online-Courses.git`. Секреты не коммитятся. Стек следующей версии: Next.js, TypeScript, Supabase Auth, PostgreSQL и Storage.

@@ -13,7 +13,7 @@
           "closed": false,
           "complete": false,
           "position": 140737488355328,
-          "lastActivityAt": "2026-10-23T23:15:18.295Z",
+          "lastActivityAt": "2026-10-23T23:36:06.955Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-29T15:00:00.000Z",
@@ -25,7 +25,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -40,7 +46,7 @@
           "closed": false,
           "complete": false,
           "position": 140737488371712,
-          "lastActivityAt": "2026-10-23T23:17:05.321Z",
+          "lastActivityAt": "2026-10-23T23:36:17.217Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-30T15:00:00.000Z",
@@ -52,7 +58,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -78,7 +90,7 @@
           "closed": false,
           "complete": false,
           "position": 1,
-          "lastActivityAt": "2026-10-23T23:15:01.036Z",
+          "lastActivityAt": "2026-10-23T23:36:26.579Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -90,7 +102,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -105,7 +123,7 @@
           "closed": false,
           "complete": false,
           "position": 2,
-          "lastActivityAt": "2026-10-23T23:15:08.816Z",
+          "lastActivityAt": "2026-10-23T23:34:15.857Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -117,7 +135,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -132,7 +156,7 @@
           "closed": false,
           "complete": false,
           "position": 3,
-          "lastActivityAt": "2026-10-23T23:13:51.239Z",
+          "lastActivityAt": "2026-10-23T23:36:55.931Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-13T15:00:00.000Z",
@@ -144,7 +168,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -159,7 +189,7 @@
           "closed": false,
           "complete": false,
           "position": 4,
-          "lastActivityAt": "2026-10-23T23:13:57.428Z",
+          "lastActivityAt": "2026-10-23T23:36:59.592Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-20T15:00:00.000Z",
@@ -171,7 +201,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -186,7 +222,7 @@
           "closed": false,
           "complete": false,
           "position": 5,
-          "lastActivityAt": "2026-10-23T23:15:14.901Z",
+          "lastActivityAt": "2026-10-23T23:37:03.317Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -198,7 +234,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -213,7 +255,7 @@
           "closed": false,
           "complete": false,
           "position": 6,
-          "lastActivityAt": "2026-10-23T23:14:04.622Z",
+          "lastActivityAt": "2026-10-23T23:37:06.988Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-27T15:00:00.000Z",
@@ -225,7 +267,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -240,7 +288,7 @@
           "closed": false,
           "complete": false,
           "position": 7,
-          "lastActivityAt": "2026-10-23T23:14:10.570Z",
+          "lastActivityAt": "2026-10-23T23:37:10.593Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-04T15:00:00.000Z",
@@ -252,7 +300,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -267,7 +321,7 @@
           "closed": false,
           "complete": false,
           "position": 8,
-          "lastActivityAt": "2026-10-23T23:14:17.295Z",
+          "lastActivityAt": "2026-10-23T23:37:14.246Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-11T15:00:00.000Z",
@@ -279,7 +333,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -294,7 +354,7 @@
           "closed": false,
           "complete": false,
           "position": 9,
-          "lastActivityAt": "2026-10-23T23:14:23.621Z",
+          "lastActivityAt": "2026-10-23T23:37:18.008Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -306,7 +366,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -321,7 +387,7 @@
           "closed": false,
           "complete": false,
           "position": 10,
-          "lastActivityAt": "2026-10-23T23:14:30.117Z",
+          "lastActivityAt": "2026-10-23T23:37:21.742Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -333,7 +399,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -348,7 +420,7 @@
           "closed": false,
           "complete": false,
           "position": 11,
-          "lastActivityAt": "2026-10-23T23:14:36.398Z",
+          "lastActivityAt": "2026-10-23T23:37:52.318Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-25T15:00:00.000Z",
@@ -360,7 +432,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -375,7 +453,7 @@
           "closed": false,
           "complete": false,
           "position": 12,
-          "lastActivityAt": "2026-10-23T23:14:43.105Z",
+          "lastActivityAt": "2026-10-23T23:37:56.937Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-25T15:00:00.000Z",
@@ -387,7 +465,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -402,7 +486,7 @@
           "closed": false,
           "complete": false,
           "position": 13,
-          "lastActivityAt": "2026-10-23T23:14:49.399Z",
+          "lastActivityAt": "2026-10-23T23:38:01.191Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -414,7 +498,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -429,7 +519,7 @@
           "closed": false,
           "complete": false,
           "position": 14,
-          "lastActivityAt": "2026-10-23T23:14:55.736Z",
+          "lastActivityAt": "2026-10-23T23:38:05.118Z",
           "startedAt": null,
           "due": {
             "date": "2027-01-01T15:00:00.000Z",
@@ -441,7 +531,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -456,7 +552,7 @@
           "closed": false,
           "complete": false,
           "position": 16398,
-          "lastActivityAt": "2026-10-23T23:09:26.703Z",
+          "lastActivityAt": "2026-10-23T23:38:09.152Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-13T15:00:00.000Z",
@@ -468,7 +564,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -483,7 +585,7 @@
           "closed": false,
           "complete": false,
           "position": 32782,
-          "lastActivityAt": "2026-10-23T23:09:32.273Z",
+          "lastActivityAt": "2026-10-23T23:38:13.312Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-20T15:00:00.000Z",
@@ -495,7 +597,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -510,7 +618,7 @@
           "closed": false,
           "complete": false,
           "position": 49166,
-          "lastActivityAt": "2026-10-23T23:09:38.449Z",
+          "lastActivityAt": "2026-10-23T23:38:17.523Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-27T15:00:00.000Z",
@@ -522,7 +630,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -537,7 +651,7 @@
           "closed": false,
           "complete": false,
           "position": 65550,
-          "lastActivityAt": "2026-10-23T23:09:44.252Z",
+          "lastActivityAt": "2026-10-23T23:38:21.665Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-04T15:00:00.000Z",
@@ -549,7 +663,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -564,7 +684,7 @@
           "closed": false,
           "complete": false,
           "position": 81934,
-          "lastActivityAt": "2026-10-23T23:09:50.544Z",
+          "lastActivityAt": "2026-10-23T23:38:25.862Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-11T15:00:00.000Z",
@@ -576,7 +696,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -591,7 +717,7 @@
           "closed": false,
           "complete": false,
           "position": 98318,
-          "lastActivityAt": "2026-10-23T23:09:55.488Z",
+          "lastActivityAt": "2026-10-23T23:38:30.120Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -603,7 +729,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -618,7 +750,7 @@
           "closed": false,
           "complete": false,
           "position": 114702,
-          "lastActivityAt": "2026-10-23T23:10:01.429Z",
+          "lastActivityAt": "2026-10-23T23:38:34.362Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -630,7 +762,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -645,7 +783,7 @@
           "closed": false,
           "complete": false,
           "position": 131086,
-          "lastActivityAt": "2026-10-23T23:10:06.949Z",
+          "lastActivityAt": "2026-10-23T23:38:38.566Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-25T15:00:00.000Z",
@@ -657,7 +795,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -672,7 +816,7 @@
           "closed": false,
           "complete": false,
           "position": 147470,
-          "lastActivityAt": "2026-10-23T23:10:14.201Z",
+          "lastActivityAt": "2026-10-23T23:39:49.413Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-25T15:00:00.000Z",
@@ -684,7 +828,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -699,7 +849,7 @@
           "closed": false,
           "complete": false,
           "position": 163854,
-          "lastActivityAt": "2026-10-23T23:10:21.899Z",
+          "lastActivityAt": "2026-10-23T23:39:53.881Z",
           "startedAt": null,
           "due": {
             "date": "2026-12-18T15:00:00.000Z",
@@ -711,7 +861,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -726,7 +882,7 @@
           "closed": false,
           "complete": false,
           "position": 180238,
-          "lastActivityAt": "2026-10-23T23:10:29.042Z",
+          "lastActivityAt": "2026-10-23T23:39:57.968Z",
           "startedAt": null,
           "due": {
             "date": "2027-01-01T15:00:00.000Z",
@@ -738,7 +894,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -753,7 +915,7 @@
           "closed": false,
           "complete": false,
           "position": 196622,
-          "lastActivityAt": "2026-10-23T23:10:38.477Z",
+          "lastActivityAt": "2026-10-23T23:40:02.538Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -765,7 +927,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -780,7 +948,7 @@
           "closed": false,
           "complete": false,
           "position": 213006,
-          "lastActivityAt": "2026-10-23T23:10:46.308Z",
+          "lastActivityAt": "2026-10-23T23:40:06.900Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -792,7 +960,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -807,7 +981,7 @@
           "closed": false,
           "complete": false,
           "position": 229390,
-          "lastActivityAt": "2026-10-23T23:10:53.794Z",
+          "lastActivityAt": "2026-10-23T23:40:11.489Z",
           "startedAt": null,
           "due": {
             "date": "2026-11-06T15:00:00.000Z",
@@ -819,7 +993,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33984b78be51fd1a926ef",
+              "fullName": "Стас Борцевич",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33984b78be51fd1a926ef/b3031383ba4db6f80809d75f50beccd5"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -845,7 +1025,7 @@
           "closed": false,
           "complete": false,
           "position": 1,
-          "lastActivityAt": "2026-10-23T23:11:34.177Z",
+          "lastActivityAt": "2026-10-23T23:40:15.549Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -857,7 +1037,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -872,7 +1058,7 @@
           "closed": false,
           "complete": false,
           "position": 2,
-          "lastActivityAt": "2026-10-23T23:11:37.811Z",
+          "lastActivityAt": "2026-10-23T23:40:19.905Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -884,7 +1070,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -899,7 +1091,7 @@
           "closed": false,
           "complete": false,
           "position": 3,
-          "lastActivityAt": "2026-10-23T23:11:41.500Z",
+          "lastActivityAt": "2026-10-23T23:40:24.315Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -911,7 +1103,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -926,7 +1124,7 @@
           "closed": false,
           "complete": false,
           "position": 4,
-          "lastActivityAt": "2026-10-23T23:11:45.795Z",
+          "lastActivityAt": "2026-10-23T23:40:28.620Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -938,7 +1136,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -953,7 +1157,7 @@
           "closed": false,
           "complete": false,
           "position": 5,
-          "lastActivityAt": "2026-10-23T23:11:49.569Z",
+          "lastActivityAt": "2026-10-23T23:41:03.145Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -965,7 +1169,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -980,7 +1190,7 @@
           "closed": false,
           "complete": false,
           "position": 6,
-          "lastActivityAt": "2026-10-23T23:11:53.570Z",
+          "lastActivityAt": "2026-10-23T23:41:07.573Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -992,7 +1202,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1007,7 +1223,7 @@
           "closed": false,
           "complete": false,
           "position": 7,
-          "lastActivityAt": "2026-10-23T23:11:57.356Z",
+          "lastActivityAt": "2026-10-23T23:41:11.990Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1019,7 +1235,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1034,7 +1256,7 @@
           "closed": false,
           "complete": false,
           "position": 8,
-          "lastActivityAt": "2026-10-23T23:12:00.784Z",
+          "lastActivityAt": "2026-10-23T23:41:16.757Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1046,7 +1268,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1061,7 +1289,7 @@
           "closed": false,
           "complete": false,
           "position": 9,
-          "lastActivityAt": "2026-10-23T23:12:04.048Z",
+          "lastActivityAt": "2026-10-23T23:41:21.240Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1073,7 +1301,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1088,7 +1322,7 @@
           "closed": false,
           "complete": false,
           "position": 10,
-          "lastActivityAt": "2026-10-23T23:12:07.982Z",
+          "lastActivityAt": "2026-10-23T23:41:25.710Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1100,7 +1334,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1115,7 +1355,7 @@
           "closed": false,
           "complete": false,
           "position": 140737488338944,
-          "lastActivityAt": "2026-10-23T23:12:11.824Z",
+          "lastActivityAt": "2026-10-23T23:41:30.281Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1127,7 +1367,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1142,7 +1388,7 @@
           "closed": false,
           "complete": false,
           "position": 140737488355328,
-          "lastActivityAt": "2026-10-23T23:12:13.690Z",
+          "lastActivityAt": "2026-10-23T23:41:34.825Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1154,7 +1400,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1163,13 +1415,13 @@
         {
           "id": "ari:cloud:trello::card/workspace/6ad28239442c60d5b10115c8/6adbe9cf634892f4fee7d334",
           "name": "[PM-01 · 3 SP] ТЗ 2.0 и согласование",
-          "description": "Ответственный: Илья Момотюк.\nПодготовлен исправленный документ. Сверить 12 замечаний, решения AUTH/ROLE/COURSE/QUIZ и принять с командой. ТЗ готово к проверке; согласование не завершено.\nОценка плановая: 3 SP.\nОбщий недельный объём: 11 SP на команду. Сроки предложены для нового плана, не исторические.",
+          "description": "Ответственный: Илья Момотюк.\nПодготовлен исправленный документ. Сверить 12 замечаний, решения AUTH/ROLE/COURSE/QUIZ и принять с командой. ТЗ готово к проверке; согласование не завершено.\nОценка плановая: 3 SP.\nОбщий недельный объём: 11 SP на команду. Сроки предложены для нового плана, не исторические.\n\nСвидетельство: Online_courses_TZ_v2.docx, 9 страниц; текст требований в локальном коммите 3d9bcef.",
           "url": "https://trello.com/c/ZWrWNdXg/41-pm-01-3-sp-%D1%82%D0%B7-20-%D0%B8-%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
           "shortUrl": "https://trello.com/c/ZWrWNdXg",
           "closed": false,
           "complete": false,
           "position": 140737488371712,
-          "lastActivityAt": "2026-10-23T23:12:15.705Z",
+          "lastActivityAt": "2026-10-23T23:41:39.399Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1181,7 +1433,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1196,7 +1454,7 @@
           "closed": false,
           "complete": false,
           "position": 140737488388096,
-          "lastActivityAt": "2026-10-23T23:12:17.393Z",
+          "lastActivityAt": "2026-10-23T23:41:43.928Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-26T15:00:00.000Z",
@@ -1208,7 +1466,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1217,13 +1481,13 @@
         {
           "id": "ari:cloud:trello::card/workspace/6ad28239442c60d5b10115c8/6adbe9d3ccc9433ac9ef98f9",
           "name": "[DEMO-01 · 3 SP] HTML: главная, каталог, демообучение",
-          "description": "Ответственный: Константин Барановский, разработчик. Спецификация и приёмка: Илья Момотюк.\nHTML-прототип подготовлен: dist/index.html, styles.css, app.js. Поиск и совместные фильтры, описание, локальная запись/уроки/прогресс/отписка/возврат. Это демо без backend.\n3 SP, срок 28.10.2026 18:00 Europe/Minsk.\nСвязанная проверка Станислава: https://trello.com/c/NE7KGdgz\nКритерии: tests/ACCEPTANCE.md. JS прошёл проверку синтаксиса. Браузерный прогон пока не выполнен; требуется ревью команды. ТЗ: CAT-01, LEARN-02…04 (демонстрация).",
+          "description": "Ответственный: Константин Барановский, разработчик. Спецификация и приёмка: Илья Момотюк.\nHTML-прототип подготовлен: dist/index.html, styles.css, app.js. Поиск и совместные фильтры, описание, локальная запись/уроки/прогресс/отписка/возврат. Это демо без backend.\n3 SP, срок 28.10.2026 18:00 Europe/Minsk.\nСвязанная проверка Станислава: https://trello.com/c/NE7KGdgz\nКритерии: tests/ACCEPTANCE.md. JS прошёл проверку синтаксиса. Браузерный прогон пока не выполнен; требуется ревью команды. ТЗ: CAT-01, LEARN-02…04 (демонстрация).\n\nСвидетельство: локальные коммиты 58112b9 (прототип), 1d6c86f (форматирование). GitHub push ещё не выполнен. Для запуска есть отдельный Online_courses_demo.html.",
           "url": "https://trello.com/c/nJQyBHUB/43-demo-01-3-sp-html-%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%B4%D0%B5%D0%BC%D0%BE%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5",
           "shortUrl": "https://trello.com/c/nJQyBHUB",
           "closed": false,
           "complete": false,
           "position": 140737488404480,
-          "lastActivityAt": "2026-10-23T23:15:17.049Z",
+          "lastActivityAt": "2026-10-23T23:42:11.614Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-28T15:00:00.000Z",
@@ -1235,7 +1499,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad2822389af5f93bb5b51b4",
+              "fullName": "lool1k",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad2822389af5f93bb5b51b4/821d381602834c1c8e493eac1d4641ac"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
@@ -1244,13 +1514,13 @@
         {
           "id": "ari:cloud:trello::card/workspace/6ad28239442c60d5b10115c8/6adbe9d6ff710d3bc5c6a8f9",
           "name": "[PM-03 · 1 SP] Выступление на 3–5 минут",
-          "description": "Ответственный: Илья Момотюк.\nПодготовить выступление по слайдам: идея, обязанности, этапы SDLC, фактический статус и план 11 SP. Не заявлять готовые auth/API/БД и не приписывать новую работу прошлой неделе. Провести репетицию втроём.\nОценка плановая: 1 SP.\nОбщий недельный объём: 11 SP на команду. Сроки предложены для нового плана, не исторические.",
+          "description": "Ответственный: Илья Момотюк.\nПодготовить выступление по слайдам: идея, обязанности, этапы SDLC, фактический статус и план 11 SP. Не заявлять готовые auth/API/БД и не приписывать новую работу прошлой неделе. Провести репетицию втроём.\nОценка плановая: 1 SP.\nОбщий недельный объём: 11 SP на команду. Сроки предложены для нового плана, не исторические.\n\nСвидетельство: Online_courses_presentation_final.pptx, 6 слайдов с заметками. Текст выступления: docs/PRESENTATION_SCRIPT.md. Репетиция командой ещё не проведена.",
           "url": "https://trello.com/c/DnEnkMb0/45-pm-03-1-sp-%D0%B2%D1%8B%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-3-5-%D0%BC%D0%B8%D0%BD%D1%83%D1%82",
           "shortUrl": "https://trello.com/c/DnEnkMb0",
           "closed": false,
           "complete": false,
           "position": 140737488420864,
-          "lastActivityAt": "2026-10-23T23:12:22.758Z",
+          "lastActivityAt": "2026-10-23T23:42:16.543Z",
           "startedAt": null,
           "due": {
             "date": "2026-10-30T15:00:00.000Z",
@@ -1262,7 +1532,13 @@
           "labelsHasMore": false,
           "checklists": [],
           "checklistsHasMore": false,
-          "members": [],
+          "members": [
+            {
+              "id": "ari:cloud:trello::user/6ad33a0ac417afbdeb1f4a5e",
+              "fullName": "Ilya",
+              "avatarUrl": "https://trello-members.s3.amazonaws.com/6ad33a0ac417afbdeb1f4a5e/9ad3bd6a59ef0b3611bace8bc08f698e"
+            }
+          ],
           "comments": [],
           "commentsHasMore": false,
           "list": null,
