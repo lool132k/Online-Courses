@@ -14,7 +14,7 @@
 Подключение Supabase и обязательные настройки: [docs/AUTH_SETUP.md](docs/AUTH_SETUP.md).
 Добавлены формы регистрации/входа, подтверждение email, серверные API, профиль и заявка преподавателя. Нужны настоящий проект Supabase и миграция; без них API возвращает 503. Полные AUTH/ROLE ещё не завершены.
 
-Итог текущей недели: [docs/SPRINT_01_RESULT.md](docs/SPRINT_01_RESULT.md). Новый цикл: [docs/SPRINT_02.md](docs/SPRINT_02.md).
+Прошлая неделя, прототип: [docs/SPRINT_01_RESULT.md](docs/SPRINT_01_RESULT.md). Текущая неделя 24–30.10, регистрация и проверки: [docs/SPRINT_02.md](docs/SPRINT_02.md). Следующая неделя, завершение и приёмка: [docs/SPRINT_03.md](docs/SPRINT_03.md).
 
 ### Отдельный HTML-прототип
 
