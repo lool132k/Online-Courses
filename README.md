@@ -8,7 +8,15 @@
 - Станислав Борцевич — тестировщик.
 - Илья Момотюк — проджект-менеджер.
 
-## Запуск первой версии
+## Серверная версия · Sprint 02
+
+`npm ci`, заполнить `.env.local` по `.env.example`, затем `npm run dev` и открыть http://localhost:3000.
+Подключение Supabase и обязательные настройки: [docs/AUTH_SETUP.md](docs/AUTH_SETUP.md).
+Добавлены формы регистрации/входа, подтверждение email, серверные API, профиль и заявка преподавателя. Нужны настоящий проект Supabase и миграция; без них API возвращает 503. Полные AUTH/ROLE ещё не завершены.
+
+Итог текущей недели: [docs/SPRINT_01_RESULT.md](docs/SPRINT_01_RESULT.md). Новый цикл: [docs/SPRINT_02.md](docs/SPRINT_02.md).
+
+### Отдельный HTML-прототип
 
 Откройте `dist/index.html` в браузере. Для одинакового поведения localStorage предпочтителен локальный HTTP-сервер: `python -m http.server 8000 --directory dist`, затем `http://localhost:8000`.
 
