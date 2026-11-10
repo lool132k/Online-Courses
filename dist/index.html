@@ -16,9 +16,16 @@
 <a href="#roles">Для авторов</a>
 <a href="#about">О платформе</a>
 </nav>
-<button id="cabinet" class="light">Мои курсы <span id="count">0</span>
+<button id="cabinet" class="light">Демокурсы <span id="count">0</span>
 </button>
+<div class="account-links" aria-label="Аккаунт">
+<a id="account-login" class="text-link" href="http://localhost:3000/auth">Войти</a>
+<a id="account-signup" class="button" href="http://localhost:3000/auth?mode=signup">Регистрация</a>
+<a id="account-profile" class="text-link" href="http://localhost:3000/account" hidden>Личный кабинет</a>
+<button id="account-logout" class="light" hidden>Выйти</button>
+</div>
 </header>
+<p id="account-status" class="account-status" role="status" aria-live="polite" hidden></p>
 <main>
 <section class="hero" id="about">
 <div>
@@ -97,7 +104,7 @@
 </section>
 <section class="demo-note">
 <strong>Демонстрационная версия</strong>
-<p>Данные курсов вымышленные. Запись и прогресс сохраняются только в этом браузере. Регистрацию, серверную проверку тестов и кабинет преподавателя команда реализует на следующих этапах.</p>
+<p>Данные курсов вымышленные. Запись и прогресс сохраняются только в этом браузере и не привязаны к аккаунту. Вход, регистрация и личный кабинет доступны в серверной версии сайта; публикация курсов и серверная проверка тестов — следующие этапы.</p>
 </section>
 </main>
 <footer>
@@ -145,5 +152,6 @@
 </dialog>
 <script src="app.js">
 </script>
+<script src="account.js"></script>
 </body>
 </html>

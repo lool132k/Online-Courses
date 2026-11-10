@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { trustedOrigin, validateAuth } from '../lib/auth-validation.ts';
+import { validateProfile } from '../lib/profile-validation.ts';
 test('registration normalizes email and name, never accepts role fields', () => {
   const result=validateAuth('signup',{email:' Student@Example.COM ',name:'  Студент  ',password:'a'.repeat(12),is_admin:true});
   assert.deepEqual(result,{email:'student@example.com',name:'Студент',password:'a'.repeat(12),errors:{}});
@@ -24,4 +25,13 @@ test('mutations reject missing, foreign, deceptive and malformed origins',()=>{
   assert.equal(trustedOrigin('http://localhost:3000','http://localhost:3000'),true);
   assert.equal(trustedOrigin('http://localhost:3001','http://localhost:3000'),false);
   assert.equal(trustedOrigin('https://courses.example','not-a-url'),false);
+});
+
+test('profile edits normalize names and reject malformed input or role injection',()=>{
+  assert.deepEqual(validateProfile({ name: '  Новое имя  ' }), { name: 'Новое имя', error: null });
+  for (const body of [null, [], 'name', {}, {name: 12}, {name:' '}, {name:'x'}, {name:'x'.repeat(81)},
+    {name:'Студент',is_admin:true}, {name:'Студент',id:'someone-else'}, {name:'Студент',blocked:false}]) {
+    assert.ok(validateProfile(body).error);
+  }
+  for (const length of [2,80]) assert.equal(validateProfile({name:'x'.repeat(length)}).error,null);
 });

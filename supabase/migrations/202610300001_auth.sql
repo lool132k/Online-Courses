@@ -1,5 +1,8 @@
 -- Apply once with Supabase migrations / SQL Editor, before enabling signup.
 begin;
+create schema if not exists private;
+revoke all on schema private from public, anon;
+grant usage on schema private to authenticated;
 create table public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   name text not null check (char_length(name) between 2 and 80),
@@ -17,8 +20,9 @@ create table public.teacher_requests (
   check (status <> 'rejected' or length(trim(reason)) > 0 and reason is not null)
 );
 create unique index one_pending_teacher_request on public.teacher_requests(user_id) where status = 'pending';
+create index teacher_requests_user_created on public.teacher_requests(user_id, created_at desc);
 
-create function public.create_student_profile() returns trigger
+create function private.create_student_profile() returns trigger
 language plpgsql security definer set search_path = '' as $$
 begin
   -- Roles never come from user-controlled raw_user_meta_data.
@@ -26,30 +30,30 @@ begin
   return new;
 end;
 $$;
-revoke all on function public.create_student_profile() from public, anon, authenticated;
+revoke all on function private.create_student_profile() from public, anon, authenticated;
 create trigger on_auth_user_created after insert on auth.users
-for each row execute function public.create_student_profile();
+for each row execute function private.create_student_profile();
 
-create function public.active_student() returns boolean
+create function private.active_student() returns boolean
 language sql stable security definer set search_path = '' as $$
   select exists (
     select 1 from public.profiles p join auth.users u on u.id = p.id
     where p.id = (select auth.uid()) and not p.blocked and u.email_confirmed_at is not null
   );
 $$;
-revoke all on function public.active_student() from public, anon;
-grant execute on function public.active_student() to authenticated;
+revoke all on function private.active_student() from public, anon;
+grant execute on function private.active_student() to authenticated;
 alter table public.profiles enable row level security;
 alter table public.teacher_requests enable row level security;
 revoke all on public.profiles, public.teacher_requests from anon, authenticated;
 grant select on public.profiles, public.teacher_requests to authenticated;
 grant insert(user_id) on public.teacher_requests to authenticated;
 create policy own_active_profile on public.profiles for select to authenticated
-using (id = (select auth.uid()) and (select public.active_student()));
+using (id = (select auth.uid()) and (select private.active_student()));
 create policy own_requests on public.teacher_requests for select to authenticated
-using (user_id = (select auth.uid()) and (select public.active_student()));
+using (user_id = (select auth.uid()) and (select private.active_student()));
 create policy request_teacher on public.teacher_requests for insert to authenticated
-with check (user_id = (select auth.uid()) and (select public.active_student())
+with check (user_id = (select auth.uid()) and (select private.active_student())
   and not exists (select 1 from public.profiles where id = (select auth.uid()) and is_teacher));
 -- No client UPDATE/DELETE policies or grants: users cannot promote/unblock themselves
 -- or approve requests. An administrator UI and audited role changes are a later slice.

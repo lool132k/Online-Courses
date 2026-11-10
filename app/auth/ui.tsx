@@ -7,7 +7,7 @@ export function AuthForm() {
   const [mode, setMode] = useState<AuthAction>(query.get('mode') === 'signup' ? 'signup' : 'login');
   const [busy, setBusy] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [message, setMessage] = useState(query.has('confirmed') ? 'Email подтверждён. Войдите с вашим паролем.' : query.has('error') ? 'Ссылка недействительна или истекла. Запросите новое письмо.' : '');
+  const [message, setMessage] = useState(query.has('confirmed') ? 'Email подтверждён. Войдите с вашим паролем.' : query.has('error') ? 'Не удалось завершить подтверждение. Если письмо открыто в другом браузере или ссылка уже использована, попробуйте войти. Иначе запросите новое письмо.' : '');
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault(); setBusy(true); setErrors({}); setMessage('');
     const form = event.currentTarget;
