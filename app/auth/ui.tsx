@@ -16,7 +16,7 @@ export function AuthForm() {
       const response = await fetch(`/api/auth/${mode}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
       const result = await response.json();
       setErrors(result.errors || {}); setMessage(result.message || 'Не удалось выполнить запрос.');
-      if (response.ok && mode === 'login') window.location.assign('/account');
+      if (response.ok && mode === 'login') window.location.assign('/demo/index.html');
       if (response.ok) form.reset();
     } catch { setMessage('Нет связи с сервером. Попробуйте ещё раз.'); }
     finally { setBusy(false); }

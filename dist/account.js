@@ -4,7 +4,6 @@
   const login = byId('account-login');
   const signup = byId('account-signup');
   const profile = byId('account-profile');
-  const logout = byId('account-logout');
   const status = byId('account-status');
   const served = location.protocol === 'http:' || location.protocol === 'https:';
   let requestNumber = 0;
@@ -19,7 +18,7 @@
   }
   function guest() {
     login.hidden = signup.hidden = false;
-    profile.hidden = logout.hidden = true;
+    profile.hidden = true;
     profile.textContent = 'Личный кабинет';
   }
   async function refresh() {
@@ -45,7 +44,7 @@
       if (typeof data.name !== 'string') throw new Error('INVALID_PROFILE');
       profile.textContent = `Кабинет: ${data.name}`;
       login.hidden = signup.hidden = true;
-      profile.hidden = logout.hidden = false;
+      profile.hidden = false;
       message('');
     } catch {
       if (current !== requestNumber) return;
@@ -53,17 +52,6 @@
       message('Не удалось проверить аккаунт. Вход и кабинет можно открыть по ссылкам; демокурсы доступны.');
     }
   }
-  logout.addEventListener('click', async () => {
-    ++requestNumber;
-    logout.disabled = true;
-    try {
-      const response = await fetch('/api/auth/logout', { method: 'POST', signal: AbortSignal.timeout(8000) });
-      if (!response.ok) throw new Error('LOGOUT_FAILED');
-      guest();
-      message('Вы вышли из аккаунта. Прогресс демокурсов остаётся в этом браузере.');
-    } catch { message('Не удалось выйти. Попробуй ещё раз или открой личный кабинет.'); }
-    finally { logout.disabled = false; }
-  });
   window.addEventListener('pageshow', refresh);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) void refresh(); });
 })();
