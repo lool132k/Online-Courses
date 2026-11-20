@@ -1,3 +1,15 @@
+# Настройка Auth: актуально на 20.11.2026
+
+Применить все SQL-файлы supabase/migrations/ по порядку. Настроить APP_URL, SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY. Site URL в Supabase — адрес Render. Confirm email должен оставаться включённым.
+
+Gmail SMTP уже подключён. Для Reset password установить шаблон supabase/templates/recovery.html с TokenHash, SiteURL и type=recovery. Код не использует обычную сессию или signup-ссылку для сброса пароля. Redirect allow-list: /auth/confirm для Render и localhost; для recovery добавить /auth/recovery при настройке нового проекта. Не меняйте действующие адреса без проверки.
+
+Минимальный пароль 12, срок email-ссылки 1800 секунд, Secure password change включён. В приложении есть ограничения email/IP и семь дней максимального возраста сеанса. Лимиты, проверенные сценарии и оговорки: [PROGRESS_2026-11-20.md](PROGRESS_2026-11-20.md).
+
+Ниже сохранена история настройки. Указанные в ней отсутствие SMTP, прежние сроки писем и будущая реализация восстановления больше не описывают текущую версию.
+
+---
+
 # Подключение регистрации · Sprint 02
 
 Supabase — выбранный в ТЗ сервис PostgreSQL, Auth и Storage. Приложение работает через сервер Next.js. Статический `dist/` остаётся отдельным демо и не запускает API.

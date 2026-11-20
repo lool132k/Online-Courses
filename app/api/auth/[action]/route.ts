@@ -1,17 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { configured, supabase } from '../../../../lib/supabase';
 import { trustedOrigin, validateAuth, type AuthAction } from '../../../../lib/auth-validation';
+import { authLimit } from '../../../../lib/auth-limits';
+import { publicSupabase } from '../../../../lib/public-supabase';
 export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest, context: { params: Promise<{ action: string }> }) {
   const reply = (body: object, status = 200) => NextResponse.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
   if (!configured()) return reply({ message: 'Регистрация и вход пока недоступны. Попробуйте позже.' }, 503);
   if (!trustedOrigin(request.headers.get('origin'), process.env.APP_URL!)) return reply({ message: 'Источник запроса не разрешён.' }, 403);
   const { action } = await context.params;
-  if (!['signup','login','resend','logout'].includes(action)) return reply({ message: 'Неизвестное действие.' }, 404);
+  if (!['signup','login','resend','recover','logout','logout-all'].includes(action)) return reply({ message: 'Неизвестное действие.' }, 404);
   try {
     const client = await supabase();
-    if (action === 'logout') {
-      const { error } = await client.auth.signOut({ scope: 'local' });
+    if (action === 'logout' || action === 'logout-all') {
+      const { error } = await client.auth.signOut({ scope: action === 'logout-all' ? 'global' : 'local' });
       if (error) return reply({ message: 'Не удалось завершить сессию. Повторите запрос.' }, 502);
       return reply({ message: 'Вы вышли из аккаунта.' });
     }
@@ -22,6 +24,14 @@ export async function POST(request: NextRequest, context: { params: Promise<{ ac
     if (!body || typeof body !== 'object' || Array.isArray(body)) return reply({ message: 'Некорректные данные.' }, 400);
     const { email, password, name, errors } = validateAuth(action as AuthAction, body);
     if (Object.keys(errors).length) return reply({ message: 'Проверьте поля формы.', errors }, 400);
+    const retry = await authLimit(action,request.headers,email);
+    if (retry) return NextResponse.json({message:'Слишком много попыток. Попробуйте позже.'},{status:429,headers:{'Cache-Control':'no-store','Retry-After':String(retry)}});
+    if (action === 'recover') {
+      const {error} = await publicSupabase().auth.resetPasswordForEmail(email, {redirectTo:new URL('/auth/recovery',process.env.APP_URL!).href});
+      if (error?.status === 429) return reply({message:'Подождите перед повторной отправкой.'},429);
+      if (error && (error.status ?? 500) >= 500) return reply({message:'Не удалось отправить письмо. Попробуйте позже.'},502);
+      return reply({message:'Если аккаунт с этим адресом существует, мы отправили ссылку восстановления. Проверьте почту и папку «Спам».'});
+    }
     const emailRedirectTo = new URL('/auth/confirm', process.env.APP_URL!).href;
     if (action === 'signup') {
       const { data, error } = await client.auth.signUp({ email, password, options: { data: { name }, emailRedirectTo } });
@@ -38,6 +48,8 @@ export async function POST(request: NextRequest, context: { params: Promise<{ ac
     }
     const { data, error } = await client.auth.signInWithPassword({ email, password });
     if (error || !data.user?.email_confirmed_at) return reply({ message: 'Не удалось войти. Проверьте email, пароль и подтверждение адреса.' }, 401);
+    const {data:active,error:sessionError} = await client.rpc('session_is_active');
+    if (sessionError || !active) { await client.auth.signOut({scope:'local'}); return reply({message:'Аккаунт или сеанс недоступен. Попробуйте войти снова.'},401); }
     return reply({ message: 'Вход выполнен.' });
   } catch { return reply({ message: 'Сервис временно недоступен. Попробуйте позже.' }, 503); }
 }

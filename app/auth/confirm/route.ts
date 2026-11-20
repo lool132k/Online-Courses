@@ -13,10 +13,10 @@ export async function GET(request: NextRequest) {
       const { data, error } = hash
         ? await client.auth.verifyOtp({ token_hash: hash, type: 'email' })
         : await client.auth.exchangeCodeForSession(code!);
-      if (!error && data.user?.email_confirmed_at) {
+      if (!error && data.user?.email_confirmed_at && !('redirectType' in data && data.redirectType === 'recovery')) {
         const { error: signOutError } = await client.auth.signOut({ scope: 'local' });
         if (!signOutError) target.search = '?confirmed=1';
-      }
+      } else if (!error && data.session) { await client.auth.signOut({scope:'local'}); }
     } catch { /* Never expose provider errors or tokens. */ }
   }
   return NextResponse.redirect(target, { headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });

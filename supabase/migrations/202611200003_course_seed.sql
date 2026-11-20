@@ -1,0 +1,18 @@
+begin;
+insert into public.courses(id,title,category,level,author,description,cover,color,ink,status) values('python','Python для начинающих','Программирование','Начальный','Команда курса','Познакомься с языком Python: от переменных до небольших программ.','Py','#eeeaff','#6750a4','published');
+insert into public.lessons(course_id,position,title,body) values('python',1,'Первое знакомство','Python — язык программирования. Программа состоит из инструкций. Например, print("Привет!") выводит сообщение. Попробуй запустить эту строку в своём интерпретаторе.');
+insert into public.lessons(course_id,position,title,body) values('python',2,'Переменные и типы','Переменная связывает имя со значением: name = "Мир". Числа, строки и логические значения помогают хранить данные. Придумай имена переменных для своего профиля.');
+insert into public.lessons(course_id,position,title,body) values('python',3,'Условия','Конструкция if позволяет выбрать действие по условию. Сравни два числа и выведи большее. На следующем этапе проекта здесь появится серверный тест.');
+insert into public.courses(id,title,category,level,author,description,cover,color,ink,status) values('design','UX/UI дизайн с нуля','Дизайн','Начальный','Команда курса','Научись превращать задачу пользователя в понятный интерфейс.','Aa','#ffedf2','#ba6787','published');
+insert into public.lessons(course_id,position,title,body) values('design',1,'Задача пользователя','Начни с вопроса: чего человек хочет достичь? Запиши одну задачу, которую решает твой экран.');
+insert into public.lessons(course_id,position,title,body) values('design',2,'Иерархия','Размер, отступы и контраст помогают выделить главное. Найди основной заголовок и действие в своём макете.');
+insert into public.lessons(course_id,position,title,body) values('design',3,'Проверка макета','Попроси другого человека найти курс в макете. Наблюдай, где возникает затруднение.');
+insert into public.courses(id,title,category,level,author,description,cover,color,ink,status) values('marketing','Основы digital-маркетинга','Маркетинг','Начальный','Команда курса','Разберись, как аудитория находит продукт и принимает решение.','↗','#e9f8ef','#408966','published');
+insert into public.lessons(course_id,position,title,body) values('marketing',1,'Аудитория','Опиши, кому помогает продукт и какую задачу решает.');
+insert into public.lessons(course_id,position,title,body) values('marketing',2,'Каналы','Подбери каналы, где твоя аудитория ищет решение.');
+insert into public.lessons(course_id,position,title,body) values('marketing',3,'Метрики','Определи полезное действие и способ его измерить.');
+insert into public.courses(id,title,category,level,author,description,cover,color,ink,status) values('data','Анализ данных на Python','Аналитика','Средний','Команда курса','Исследуй таблицы, находи закономерности и формулируй выводы.','01','#fff6dc','#b49139','published');
+insert into public.lessons(course_id,position,title,body) values('data',1,'Данные','Проверь названия колонок, единицы измерения и пропуски.');
+insert into public.lessons(course_id,position,title,body) values('data',2,'Исследование','Посчитай основные показатели и проверь необычные значения.');
+insert into public.lessons(course_id,position,title,body) values('data',3,'Вывод','Сформулируй вывод, который прямо следует из данных, и укажи ограничения.');
+commit;

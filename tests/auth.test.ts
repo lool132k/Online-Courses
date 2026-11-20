@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { trustedOrigin, validateAuth } from '../lib/auth-validation.ts';
 import { validateProfile } from '../lib/profile-validation.ts';
+import { validRecoveryToken, validateNewPassword } from '../lib/recovery-validation.ts';
 test('registration normalizes email and name, never accepts role fields', () => {
   const result=validateAuth('signup',{email:' Student@Example.COM ',name:'  Студент  ',password:'a'.repeat(12),is_admin:true});
   assert.deepEqual(result,{email:'student@example.com',name:'Студент',password:'a'.repeat(12),errors:{}});
@@ -34,4 +35,20 @@ test('profile edits normalize names and reject malformed input or role injection
     assert.ok(validateProfile(body).error);
   }
   for (const length of [2,80]) assert.equal(validateProfile({name:'x'.repeat(length)}).error,null);
+});
+
+test('recovery requests validate email without requiring a password',()=>{
+  assert.deepEqual(validateAuth('recover',{email:' Student@Example.COM '}).errors,{});
+  assert.equal(validateAuth('recover',{email:' Student@Example.COM '}).email,'student@example.com');
+  assert.ok(validateAuth('recover',{email:'bad'}).errors.email);
+});
+
+test('password reset rejects mismatches, malformed input, extra fields and preserves spaces',()=>{
+  for(const value of [null,[],{}, {password:'short',confirmation:'short'}, {password:'a'.repeat(12),confirmation:'b'.repeat(12)}, {password:'a'.repeat(129),confirmation:'a'.repeat(129)}, {password:'a'.repeat(12),confirmation:'a'.repeat(12),is_admin:true}]) assert.ok(validateNewPassword(value));
+  assert.equal(validateNewPassword({password:' '.repeat(12),confirmation:' '.repeat(12)}),null);
+});
+
+test('recovery tickets reject missing, oversized and unsafe URL values',()=>{
+  for(const value of [null,undefined,'','a'.repeat(19),'a'.repeat(257),'<script>alert(1)</script>','a'.repeat(20)+'\n']) assert.equal(validRecoveryToken(value),false);
+  assert.equal(validRecoveryToken('ab'.repeat(32)),true);
 });

@@ -9,6 +9,7 @@ async function identity() {
   const { data: { user }, error } = await client.auth.getUser();
   if (error || !user?.email_confirmed_at) return null;
   const { data: profile, error: profileError } = await client.from('profiles').select('name,is_teacher,is_admin,blocked').eq('id',user.id).single();
+  if (profileError?.code === 'PGRST116') return null;
   if (profileError) throw new Error('PROFILE_UNAVAILABLE');
   if (!profile || profile.blocked) return null;
   return { client, user, profile };
