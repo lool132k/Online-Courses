@@ -1,5 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { courseLogin, courseReturnPath, lessonPosition, studyHref } from '../lib/course-routing.ts';
+import { parseVideo, progressPercent, videoLink } from '../lib/learning-types.ts';
 import { trustedOrigin, validateAuth } from '../lib/auth-validation.ts';
 import { validateProfile } from '../lib/profile-validation.ts';
 import { validRecoveryToken, validateNewPassword } from '../lib/recovery-validation.ts';
@@ -51,4 +53,32 @@ test('password reset rejects mismatches, malformed input, extra fields and prese
 test('recovery tickets reject missing, oversized and unsafe URL values',()=>{
   for(const value of [null,undefined,'','a'.repeat(19),'a'.repeat(257),'<script>alert(1)</script>','a'.repeat(20)+'\n']) assert.equal(validRecoveryToken(value),false);
   assert.equal(validRecoveryToken('ab'.repeat(32)),true);
+});
+test('course return paths allow only local catalog and learning pages', () => {
+  assert.equal(courseReturnPath('/courses/python'), '/courses/python');
+  assert.equal(courseReturnPath('/learn/python'), '/learn/python');
+  assert.equal(courseReturnPath('/learn/python?lesson=1'), '/learn/python?lesson=1');
+  assert.equal(courseReturnPath('/learn/python?lesson=100'), '/learn/python?lesson=100');
+  for (const value of [
+    '//other.example/courses/python', '/courses/../account', '/courses/%2fexternal',
+    '/courses/python?lesson=1', '/studio/python', '/learn/python?lesson=0', '/learn/python?lesson=01',
+    '/learn/python?lesson=101', '/learn/python?lesson=2&lesson=3', '/learn/python?lesson=2#extra',
+    '/learn/python?lesson=2&next=https://other.example', '/learn/python?lesson=%32', '/learn/python?lesson=2\n',
+  ]) {
+    assert.equal(courseReturnPath(value), null);
+  }
+  const lesson = studyHref('python', lessonPosition('2'));
+  assert.equal(lesson, '/learn/python?lesson=2');
+  assert.equal(new URL(courseLogin(lesson), 'https://bmb.example').searchParams.get('next'), lesson);
+});
+
+test('video embeds use fixed providers and partial progress never rounds to 100%', () => {
+  assert.equal(parseVideo('https://youtu.be/abcdefghijk'), 'youtube:abcdefghijk');
+  assert.equal(parseVideo('https://vimeo.com/123456'), 'vimeo:123456');
+  assert.equal(parseVideo('https://youtube.com.evil.example/watch?v=abcdefghijk'), null);
+  assert.equal(parseVideo('http://youtu.be/abcdefghijk'), null);
+  assert.equal(videoLink('youtube:abcdefghijk', true), 'https://www.youtube-nocookie.com/embed/abcdefghijk');
+  assert.equal(videoLink('javascript:alert(1)', true), '');
+  assert.equal(progressPercent(500, 501), 99);
+  assert.equal(progressPercent(501, 501), 100);
 });

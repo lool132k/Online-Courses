@@ -1,3 +1,3 @@
 export default function Home() {
-  return <section className="hero"><p className="eyebrow">НОВЫЙ ШАГ В ОБУЧЕНИИ</p><h1>Твои знания.<br/>Твой аккаунт.</h1><p>Создай аккаунт, подтверди email и войди в личный кабинет.</p><div className="actions"><a className="button" href="/auth?mode=signup">Зарегистрироваться ↗</a><a className="button secondary" href="/auth">Войти</a></div><div className="notice"><strong>Каталог уже можно попробовать</strong><p>Четыре демонстрационных курса с уроками и локальным прогрессом. Перенос обучения в базу данных — следующий этап.</p><a href="/demo/index.html">Открыть каталог →</a></div></section>;
+  return <section className="hero"><h1>Бесплатные онлайн-курсы</h1><p>Выбери курс, изучай уроки и продолжай с того же места на любом устройстве.</p><div className="actions"><a className="button" href="/courses">Открыть каталог</a><a className="button secondary" href="/auth?mode=signup">Зарегистрироваться</a></div></section>;
 }

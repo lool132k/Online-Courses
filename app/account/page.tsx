@@ -27,7 +27,7 @@ export default function Account() {
   }
   async function action(logout: boolean) {
     setBusy(true);
-    try { const r=await fetch(logout?'/api/auth/logout':'/api/account',{method:'POST'}); const data=await r.json(); if(r.ok && logout) window.location.assign('/demo/index.html'); else {if(r.ok) await load();setMessage(data.message);} }
+    try { const r=await fetch(logout?'/api/auth/logout':'/api/account',{method:'POST'}); const data=await r.json(); if(r.ok && logout) window.location.assign('/courses'); else {if(r.ok) await load();setMessage(data.message);} }
     catch {setMessage('Нет связи с сервером. Повторите попытку.');} finally {setBusy(false);}
   }
   if (!profile) return <section className="panel"><p className="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p><h1>Ваш аккаунт</h1><p role="status">{message}</p><div className="actions"><a className="button" href="/auth">Войти или зарегистрироваться</a><button className="secondary" onClick={load}>Повторить загрузку</button></div></section>;

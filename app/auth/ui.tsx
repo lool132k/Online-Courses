@@ -2,8 +2,10 @@
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { AuthAction } from '../../lib/auth-validation';
+import { courseReturnPath } from '../../lib/course-routing';
 export function AuthForm() {
   const query = useSearchParams();
+  const returnTo = courseReturnPath(query.get('next'));
   const [mode, setMode] = useState<AuthAction>(query.get('mode') === 'recover' ? 'recover' : query.get('mode') === 'signup' ? 'signup' : 'login');
   const [busy, setBusy] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -13,10 +15,11 @@ export function AuthForm() {
     const form = event.currentTarget;
     try {
       const values = Object.fromEntries(new FormData(form));
+      if (returnTo) values.next = returnTo;
       const response = await fetch(`/api/auth/${mode}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
       const result = await response.json();
       setErrors(result.errors || {}); setMessage(result.message || 'Не удалось выполнить запрос.');
-      if (response.ok && mode === 'login') window.location.assign('/demo/index.html');
+      if (response.ok && mode === 'login') window.location.assign(returnTo ?? '/courses');
       if (response.ok) form.reset();
     } catch { setMessage('Нет связи с сервером. Попробуйте ещё раз.'); }
     finally { setBusy(false); }

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { configured, supabase } from '../../../lib/supabase';
+import { courseReturnPath } from '../../../lib/course-routing';
 export async function GET(request: NextRequest) {
   const target = new URL('/auth?error=confirmation', process.env.APP_URL || request.url);
   const hash = request.nextUrl.searchParams.get('token_hash');
@@ -19,5 +20,9 @@ export async function GET(request: NextRequest) {
       } else if (!error && data.session) { await client.auth.signOut({scope:'local'}); }
     } catch { /* Never expose provider errors or tokens. */ }
   }
-  return NextResponse.redirect(target, { headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });
+  const returnTo = courseReturnPath(request.cookies.get('bmb-course-return')?.value);
+  if (returnTo) target.searchParams.set('next', returnTo);
+  const response = NextResponse.redirect(target, { headers: { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });
+  if (target.searchParams.has('confirmed') && returnTo) response.cookies.set('bmb-course-return', '', { path: '/auth/confirm', maxAge: 0 });
+  return response;
 }
