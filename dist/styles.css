@@ -45,10 +45,12 @@ button:hover,.button:hover {
   max-width:1200px;
   margin:auto}
 .header {
-  height:100px;
+  min-height:100px;
+  height:auto;
   display:flex;
   align-items:center;
-  gap:64px;
+  gap:24px;
+  flex-wrap:wrap;
   padding:0 36px}
 .brand {
   font-size:26px;
@@ -66,6 +68,11 @@ button:hover,.button:hover {
   font-size:14px}
 .header>.light {
   margin-left:auto}
+.account-links {display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0}
+.account-links .button,.account-links button {padding:10px 14px;gap:8px}
+.account-links a {max-width:240px;overflow-wrap:anywhere}
+.account-status {max-width:1128px;margin:0 auto;padding:8px 20px;color:var(--muted);font-size:14px}
+[hidden] {display:none!important}
 .light {
   background:#f1eefc;
   color:var(--purple)}
