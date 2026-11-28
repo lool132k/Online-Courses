@@ -1,6 +1,32 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
-export const metadata: Metadata = { title: 'Names — онлайн-курсы', description: 'Бесплатные курсы и личный кабинет' };
+import './courses.css';
+import './marketing.css';
+import { SiteNav } from './site-nav';
+
+export const metadata: Metadata = { title: 'BMBCourses — онлайн-курсы', description: 'Бесплатные курсы и личный кабинет BMBCourses' };
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ru"><body><header><a className="brand" href="/">Names<span>курсы</span></a><nav aria-label="Основное меню"><a href="/demo/index.html">Каталог · демо</a><a href="/account">Личный кабинет</a></nav></header><main>{children}</main><footer>Онлайн-курсы · учебный проект · 2026</footer></body></html>;
+  return <html lang="ru">
+    <body>
+      <header className="site-header">
+        <Link className="brand" href="/" aria-label="BMBCourses, главная">BMBCourses</Link>
+        <SiteNav/>
+        <Link className="button secondary header-account" href="/account">Личный кабинет</Link>
+      </header>
+      <main className="site-main">{children}</main>
+      <footer className="site-footer">
+        <div>
+          <Link className="brand" href="/">BMBCourses</Link>
+          <p>Учебная платформа бесплатных онлайн-курсов</p>
+        </div>
+        <nav aria-label="Ссылки в подвале">
+          <Link href="/courses">Каталог</Link>
+          <Link href="/about">О платформе</Link>
+          <Link href="/studio">Для авторов</Link>
+        </nav>
+      </footer>
+    </body>
+  </html>;
 }

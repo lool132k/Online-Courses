@@ -1,5 +1,5 @@
 'use strict';
-const courses=[
+const demoCourses=[
 {
   id:'python',title:'Python для начинающих',category:'Программирование',level:'Начальный',author:'Команда курса',cover:'Py',color:'#eeeaff',ink:'#6750a4',description:'Познакомься с языком Python: от переменных до небольших программ.',lessons:[['Первое знакомство','Python — язык программирования. Программа состоит из инструкций. Например, print("Привет!") выводит сообщение. Попробуй запустить эту строку в своём интерпретаторе.'],['Переменные и типы','Переменная связывает имя со значением: name = "Мир". Числа, строки и логические значения помогают хранить данные. Придумай имена переменных для своего профиля.'],['Условия','Конструкция if позволяет выбрать действие по условию. Сравни два числа и выведи большее. На следующем этапе проекта здесь появится серверный тест.']]
 }
@@ -16,11 +16,15 @@ const courses=[
   id:'data',title:'Анализ данных на Python',category:'Аналитика',level:'Средний',author:'Команда курса',cover:'01',color:'#fff6dc',ink:'#b49139',description:'Исследуй таблицы, находи закономерности и формулируй выводы.',lessons:[['Данные','Проверь названия колонок, единицы измерения и пропуски.'],['Исследование','Посчитай основные показатели и проверь необычные значения.'],['Вывод','Сформулируй вывод, который прямо следует из данных, и укажи ограничения.']]
 }
 ];
+let courses=[];
+let sourceIsCloud=false;
 const $=s=>document.querySelector(s);
 let state={
 }
 ;
 let storageOK=true;
+function restoreProgress(){
+state={};
 try{
   const raw=JSON.parse(localStorage.getItem('names-courses-v1')||'{}');
   for(const c of courses){
@@ -32,6 +36,7 @@ catch{
   state={
   }
   ;
+}
 }
 function save(){
   try{
@@ -55,7 +60,15 @@ function render(){
   for(const c of rows){
     const el=document.createElement('article');
     el.className='card';
-    el.innerHTML=`<div class="cover" style="background:${c.color};color:${c.ink}">${c.cover}</div><div class="card-body"><span class="tag">${c.category}</span><h3>${c.title}</h3><p>${c.author}</p><p>${c.level} · ${c.lessons.length} урока</p><div class="card-bottom"><strong>Бесплатно</strong><button type="button">О курсе ↗</button></div></div>`;
+    const node=(tag,value,cls)=>{const n=document.createElement(tag);n.textContent=value;if(cls)n.className=cls;return n;};
+    const cover=node('div',c.cover,'cover');
+    if(/^#[a-f0-9]{6}$/i.test(c.color))cover.style.backgroundColor=c.color;
+    if(/^#[a-f0-9]{6}$/i.test(c.ink))cover.style.color=c.ink;
+    const body=node('div','','card-body'),bottom=node('div','','card-bottom');
+    const open=node('button','О курсе ↗');open.type='button';
+    bottom.append(node('strong','Бесплатно'),open);
+    body.append(node('span',c.category,'tag'),node('h3',c.title),node('p',c.author),node('p',c.level+' · '+c.lessons.length+' урока'),bottom);
+    el.append(cover,body);
     el.querySelector('button').addEventListener('click',()=>openCourse(c.id));
     $('#courses').append(el);
   }
@@ -77,7 +90,7 @@ function refreshDetail(){
   $('#dialog-title').textContent=c.title;
   $('#dialog-category').textContent=c.category;
   $('#dialog-description').textContent=c.description;
-  $('#dialog-meta').textContent=`${c.level} · бесплатно · демонстрационный курс`;
+  $('#dialog-meta').textContent=`${c.level} · бесплатно · ${sourceIsCloud ? "курс из Supabase" : "демонстрационный курс"}`;
   $('#program').replaceChildren();
   c.lessons.forEach((l,i)=>{
     const li=document.createElement('li');
@@ -131,7 +144,8 @@ function message(title){
   $('#message').showModal();
 }
 $('#teacher').addEventListener('click',()=>{
-  message('Кабинет преподавателя — следующий этап');
+  if(location.protocol==='http:'||location.protocol==='https:'){location.assign('/account');return;}
+  message('Заявка преподавателя');
   const p=document.createElement('p');
   p.textContent='В готовой системе подтверждённый пользователь отправит заявку преподавателя. Администратор проверит её и откроет создание курсов. В этой версии доступен каталог и демонстрация обучения.';
   $('#message-body').append(p);
@@ -164,5 +178,20 @@ $('#cabinet').addEventListener('click',()=>{
   }
 }
 );
-updateCount();
-render();
+async function loadCourses(){
+  $('#results').textContent='Загружаем курсы…';
+  try{
+    if(location.protocol==='file:'){courses=demoCourses;sourceIsCloud=false;}
+    else{
+      const response=await fetch('/api/courses',{cache:'no-store',signal:AbortSignal.timeout(15000)});
+      if(response.status===404){courses=demoCourses;sourceIsCloud=false;}
+      else{if(!response.ok)throw new Error('CATALOG_UNAVAILABLE');const data=await response.json();if(!Array.isArray(data.courses))throw new Error('INVALID_CATALOG');courses=data.courses;sourceIsCloud=true;}
+    }
+    restoreProgress();updateCount();render();
+    $('#catalog-source').textContent=sourceIsCloud?'Курсы загружены из Supabase. Прогресс обучения пока сохраняется только в этом браузере.':'Локальная демонстрация. Для облачного каталога открой серверную версию BMBCourses.';
+  }catch{
+    courses=[];$('#courses').replaceChildren();$('#results').textContent='Не удалось загрузить курсы. Проверь подключение и попробуй ещё раз.';
+    const retry=document.createElement('button');retry.textContent='Повторить загрузку';retry.type='button';retry.addEventListener('click',loadCourses);$('#courses').append(retry);
+  }
+}
+void loadCourses();
